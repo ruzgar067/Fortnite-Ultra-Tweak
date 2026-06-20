@@ -1,0 +1,59 @@
+import type { Metadata } from "next";
+import Script from "next/script";
+import { Orbitron, Rajdhani, Barlow } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { AgentationGuard } from "@/components/AgentationGuard";
+import { HappySeedsWatermark } from "@/components/HappySeedsWatermark";
+import { AuthProvider } from "@/lib/useAuth";
+import "./globals.css";
+import jsonMetadata from "../metadata.json";
+
+const orbitron = Orbitron({
+  variable: "--font-orbitron",
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "900"],
+});
+
+const rajdhani = Rajdhani({
+  variable: "--font-rajdhani",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const barlow = Barlow({
+  variable: "--font-barlow",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
+
+export const metadata: Metadata = jsonMetadata;
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <head>
+        {process.env.NODE_ENV === "production" && (
+          <Script
+            async
+            src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL}
+            data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+          />
+        )}
+      </head>
+      <body
+        className={`${orbitron.variable} ${rajdhani.variable} ${barlow.variable} antialiased`}
+      >
+        <AuthProvider>
+          {children}
+        </AuthProvider>
+        <HappySeedsWatermark />
+        <AgentationGuard />
+        {process.env.NODE_ENV === "production" && <Analytics />}
+      </body>
+    </html>
+  );
+}

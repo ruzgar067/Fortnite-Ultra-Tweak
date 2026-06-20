@@ -1,0 +1,76 @@
+Create a modern esports-themed website called "UltraTweak".
+
+Purpose:
+Provide educational Windows, Fortnite, FPS optimization, latency reduction, and network tuning guides for competitive gamers.
+
+Design:
+- Dark esports theme
+- Neon blue and purple accents
+- Smooth animations
+- Responsive mobile and desktop layout
+- Professional gaming aesthetic
+- Performance dashboard style
+
+Pages:
+
+1. Home
+- Hero section with slogan:
+  "Maximize FPS. Minimize Input Delay."
+- Performance statistics cards
+- Featured optimization guides
+- Testimonials section
+- Call-to-action buttons
+
+2. FPS Optimization
+- Windows optimization guides
+- Startup app management
+- Power plan optimization
+- GPU settings guides
+- Fortnite graphics recommendations
+- Before/After FPS comparison cards
+
+3. Input Delay Reduction
+- Mouse optimization tips
+- Keyboard optimization tips
+- USB optimization explanations
+- Display settings recommendations
+- Competitive gaming setup guides
+
+4. Network Optimization
+- DNS explanation
+- Network troubleshooting
+- Packet loss information
+- Ping optimization best practices
+- Ethernet vs Wi-Fi comparisons
+
+5. Registry Tweaks Section
+IMPORTANT:
+Only include safe, reversible, and documented registry adjustments.
+Display warnings before every registry change.
+Provide backup instructions.
+Do not include harmful, undocumented, risky, or potentially system-damaging tweaks.
+
+6. Fortnite Competitive Settings
+- Professional player settings showcase
+- Sensitivity database
+- Resolution recommendations
+- Performance mode explanations
+- Competitive optimization tips
+
+7. Tools Page
+- FPS Calculator
+- Sensitivity Converter
+- Ping Tester UI mockup
+- PC Performance Checklist
+
+Features:
+- Search bar
+- Dark mode
+- User accounts
+- Favorites system
+- Modern cards and tables
+- FAQ section
+- Blog section
+
+Style:
+Clean, professional, trustworthy, esports-focused, high-performance appearance similar to premium gaming optimization websites.

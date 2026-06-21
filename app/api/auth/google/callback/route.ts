@@ -13,7 +13,9 @@ export async function GET(req: NextRequest) {
 
   const clientId = process.env.GOOGLE_CLIENT_ID!.trim()
   const clientSecret = process.env.GOOGLE_CLIENT_SECRET!.trim()
-  const redirectUri = process.env.GOOGLE_REDIRECT_URI!.trim()
+  const host = req.headers.get('host') ?? 'fortnite-ultra-tweaker.vercel.app'
+  const proto = host.includes('localhost') ? 'http' : 'https'
+  const redirectUri = `${proto}://${host}/api/auth/google/callback`
 
   // Exchange code for tokens
   const tokenRes = await fetch('https://oauth2.googleapis.com/token', {

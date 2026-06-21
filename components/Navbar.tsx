@@ -2,9 +2,10 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Zap, Search, Coins, LogOut, User } from "lucide-react";
+import { Menu, X, Search, Coins, LogOut, User } from "lucide-react";
 import { useAuth } from "@/lib/useAuth";
 import Image from "next/image";
+import Logo from "@/components/Logo";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -28,9 +29,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded bg-gradient-to-br from-[#00c8ff] to-[#a855f7] flex items-center justify-center glow-blue">
-              <Zap className="w-5 h-5 text-white" fill="white" />
-            </div>
+            <Logo size={36} />
             <span className="font-[family-name:var(--font-orbitron)] font-bold text-lg tracking-wider">
               <span className="text-[#ec4899]">FORTNITE</span>
               <span className="text-[#00c8ff]"> ULTRA</span>

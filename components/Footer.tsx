@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Zap, Github, Twitter, Youtube } from "lucide-react";
+import { Github, Twitter, Youtube } from "lucide-react";
+import Logo from "@/components/Logo";
 
 export default function Footer() {
   return (
@@ -9,9 +10,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-3">
-              <div className="w-7 h-7 rounded bg-gradient-to-br from-[#00c8ff] to-[#a855f7] flex items-center justify-center">
-                <Zap className="w-4 h-4 text-white" fill="white" />
-              </div>
+              <Logo size={28} />
               <span className="font-[family-name:var(--font-orbitron)] font-bold text-base">
                 <span className="text-[#ec4899]">FORTNITE</span>
                 <span className="text-[#00c8ff]"> ULTRA</span>

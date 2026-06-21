@@ -2,7 +2,8 @@
 import { useEffect, useState, Suspense } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { useAuth } from "@/lib/useAuth"
-import { Zap, Chrome, AlertCircle, Coins } from "lucide-react"
+import { Chrome, AlertCircle, Coins } from "lucide-react"
+import Logo from "@/components/Logo"
 import Link from "next/link"
 
 function AuthForm() {
@@ -38,9 +39,7 @@ function AuthForm() {
     <div className="relative z-10 w-full max-w-md">
       <div className="text-center mb-8">
         <Link href="/" className="inline-flex items-center gap-2 mb-4">
-          <div className="w-9 h-9 rounded bg-gradient-to-br from-[#00c8ff] to-[#a855f7] flex items-center justify-center">
-            <Zap className="w-5 h-5 text-white" fill="white" />
-          </div>
+          <Logo size={38} />
           <span className="font-[family-name:var(--font-orbitron)] font-bold text-xl">
             <span className="text-[#ec4899]">FORTNITE</span>
             <span className="text-[#00c8ff]"> ULTRA</span>

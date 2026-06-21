@@ -11,9 +11,9 @@ export async function GET(req: NextRequest) {
     return NextResponse.redirect(new URL('/auth?error=invalid_state', req.url))
   }
 
-  const clientId = process.env.GOOGLE_CLIENT_ID!
-  const clientSecret = process.env.GOOGLE_CLIENT_SECRET!
-  const redirectUri = process.env.GOOGLE_REDIRECT_URI!
+  const clientId = process.env.GOOGLE_CLIENT_ID!.trim()
+  const clientSecret = process.env.GOOGLE_CLIENT_SECRET!.trim()
+  const redirectUri = process.env.GOOGLE_REDIRECT_URI!.trim()
 
   // Exchange code for tokens
   const tokenRes = await fetch('https://oauth2.googleapis.com/token', {
